@@ -114,6 +114,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### ffmpeg (required for Whisper)
+ffmpeg must be installed separately on your system and available on PATH. Whisper will fail without it.
+
+```bash
+# Windows: download from https://ffmpeg.org/download.html and add to PATH
+# Mac
+brew install ffmpeg
+
+# Linux
+sudo apt install ffmpeg
+```
+
 ### Requirements
 See `requirements.txt`. Key dependencies:
 - `openai-whisper`
@@ -121,7 +133,7 @@ See `requirements.txt`. Key dependencies:
 - `openpyxl`
 - `pandas`
 - `torch`
-- `ffmpeg` (must be on system PATH for Whisper audio loading)
+- `ffmpeg` (system-level, see above)
 
 ---
 
